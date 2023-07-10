@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Presentation": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DB_CONNECTION_STRING": "Server=10.4.69.104;Database=JukeLadder-G2;User Id=sa;Password=OfficeProjet1.;TrustServerCertificate=True",
+        "KEYCLOAK_ISSUER": "https://69.keycloak.sulin.ga/realms/JukeLadder",
+        "KEYCLOAK_RSA_PUBLIC_KEY": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA/DknDFER5mkTuY9Ha/FY7d65n/lAbNuGjF5np2Wyg+vSiiglkIONVgSmGNTlKuqrTpyrhoiyWf0XeJAipphH32fVUHuRkDHAVhKOmBgeKmlWsmco+N37QHHgu1CpxyvYuip7sJmDdyYQb0lxyzvqa10LnJCdWrD0eooAo3OPfNPxk2lbHKf3uvY1PTPE5GR/Mi5VZRSYP+VpWWrBcdU5DRYOKlW+XWhm90r/PR+010Nd49MMmGhgD/l3zYlbrhkycahJyDt+M2vHWI7X7CrZgPMom8SRiqfcO/Iw/tu1HSpqR42FJoyga4E6epsDTiPR0wHHNLBif99O0n/35WyaLwIDAQAB",
+        "RABBITMQ_HOST": "10.4.69.106",
+        "RABBITMQ_VIRTUAL_HOST": "/",
+        "RABBITMQ_PASSWORD": "Po@saicU_44",
+        "RABBITMQ_USERNAME": "admin",
+        "DEEZER_URL": "https://api.deezer.com",
+        "SOLR_URL": "http://69.solr.sulin.ga/solr/tracks",
+        "SOLR_USERNAME": "admin",
+        "SOLR_PASSWORD": "Isi#I0Osij@Fr0g",
+        "OPEN_TELEMETRY_COLLECTOR_URL": "http://localhost:4317"
+      },
+      "applicationUrl": "https://localhost:7115;http://localhost:5115",
+      "dotnetRunMessages": true
+    }
+  }
+}

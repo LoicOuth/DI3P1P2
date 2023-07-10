@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: catalog
+  name: catalog
+spec:
+  selector:
+    matchLabels:
+      app: catalog
+  template:
+    metadata:
+      labels:
+        app: catalog
+    spec:
+      containers:
+        - image: catalog:dev
+          name: catalog
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: catalog
+  labels:
+    app: catalog
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: catalog

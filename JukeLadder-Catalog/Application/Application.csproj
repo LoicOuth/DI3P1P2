@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="12.0.0" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+		<PackageReference Include="FluentValidation" Version="11.4.0" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
+		<PackageReference Include="MassTransit.RabbitMQ" Version="8.0.8" />
+		<PackageReference Include="MediatR" Version="11.1.0" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+		<PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
+		<PackageReference Include="SolrNet.Core" Version="1.1.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Domain\Domain.csproj" />
+	</ItemGroup>
+
+</Project>

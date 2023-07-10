@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: billing
+  name: billing
+spec:
+  selector:
+    matchLabels:
+      app: billing
+  template:
+    metadata:
+      labels:
+        app: billing
+    spec:
+      containers:
+        - image: billing:dev
+          name: billing
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: billing
+  labels:
+    app: billing
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: billing

@@ -1,0 +1,178 @@
+{
+   "administrator" : {
+      "sidebar": {
+         "dashboard": "Tableau de bord",
+         "franchisees": "Franchises",
+         "payment": "Paiment"
+      },
+
+      "dashboard": {
+         "widgetFranchise": "Franchises"
+      },
+
+      "franchise": {
+         "createFranchise": "Créer une franchise",
+         "updateFranchise": "Mettre à jour la franchise",
+
+         "addPopup": {
+            "nameInput": "Entrer un nom",
+            "chooseInput": "Choisir un utilisateur",
+
+            "alert": {
+               "createdSuccess": "Franchise créer avec succès !",
+               "createdError": "Une erreur est survenue lors de la création de la franchise !",
+               "updatedSuccess": "Franchise mis à jour avec succès",
+               "updatedError": "Une erreur est survenue lors de la mise à jour de la franchise !",
+               "deleteSuccess": "Franchise supprimer avec succès !",
+               "deletedError": "Une erreur est survenue lors de la suppression de la franchise !"
+
+            }
+         },
+
+         "table": {
+            "name": "Nom",
+            "barManager": "Manager du bar",
+            "action": "Action"
+         },
+         "popupDelete": {
+            "body": "Voulez-vous vraiment supprimer la franchise ayant le nom : ",
+            "btn": "Valider"
+         }
+      },
+
+      "payment": {
+         "btn": "Valider",
+         "min": "Pourboire minimum",
+         "max": "Pourboire maximum",
+         "from": "De",
+         "to": "A",
+
+         "alert": {
+            "updatedSuccess": "Les limites des pourboires ont été mis à jour avec succès !",
+            "updatedError": "Erreur lors de la mise à jours des limites des pourboires !"
+         }
+      }
+   },
+
+   "manager": {
+      "load": {
+         "loadingText": "Récupération des informations...",
+         "btnText": "Retourner à la page d'accueil",
+         "errorText": "Vous n'avez pas de bar assinger. Veuillez contacter l'administrateur"
+      },
+      "sidebar": {
+         "dashboard": "Tableau de bord",
+         "payment": "Paiment",
+         "catalog": "Catalogue",
+         "playlist": "Playlist actuelle"
+
+      },
+
+      "dashboard": {
+         "serviceStatus": "Status de la playlist",
+         "payFeature": "Service de paiment",
+
+         "alert": {
+            "billingState" : "Erreur lors de la mise à jour du status de la fonction promouvoir !",
+            "playlistState" : "Erreur lors de la mise à jour du status de la playlist !"
+         }
+      },
+
+      "payment": {
+         "promoteTitle": "Modifier le prix pour la fonctionnalité de promotion",
+         "demoteTitle": "Modifier le prix pour la fonctionnalité de rétrogradation",
+         "price": "Prix",
+         "btn": "Valider",
+
+         "alert": {
+            "updatedSuccess": "Le pourboire à été mis à jour avec succès : ",
+            "updatedError": "Erreur lors de la mise à jour du pourboire !"
+         }
+      },
+
+      "catalog": {
+         "search": "Rechercher une playlist",
+         "placeholder": "Rechercher une playlist deezer",
+         "btnAdd": "Ajouter",
+
+         "alert": {
+            "addedSuccess": "Les musiques on été ajouté avec succès à votre catalogue !",
+            "addedError": "Erreur lors de l'ajout des musiques dans le catalogue !"
+         }
+      },
+
+      "playlist": {
+         "btnAdd": "Ajouter une musique",
+         "theme": "Thème de la playlist",
+
+         "manage": {
+            "titleAdd": "Ajouter une musique à la playlist actuelle",
+            "title": "Supprimer une musique",
+            "body": "Voulez-vous vraiment supprimer la musique suivante de la playlist : ",
+            "btn": "Confirmer",
+            "btnAdd": "Ajouter"
+         },
+
+         "alert" : {
+            "trackSuccess": "La musique a été ajouter dans la playlist avec succès !",
+            "trackError": "Une erreur est survenue lors de l'ajout de la musique dans la playlist",
+            "positionSuccess": "La position de la musique à été mise à jour avec succès",
+            "positionError": "Erreur lors de la mise à jour de la position",
+            "trackDeleted": "La musique a été supprimer de la playlist avec succès !"
+         }
+      }
+   },
+
+   "playlist": {
+      "loadingText": "Chargement de la playlist",
+      "desactivated": "La playlist est désactivée",
+      "theme": "Réstriction du thème",
+      "payFee": {
+         "part1": "Votre musique va être ajoutée dans la playlist du bar.",
+         "part2": "Elle va être jouer dans environ",
+         "part3": "Vous pouvez payer pour la jouer imédiatement.",
+         "part4": "Vous pouvez payer imédiatement pour retrograder la musique.",
+         "btnAdd":"Ajouter",
+         "btnPay&Add": "Payer et ajouter",
+         "btnDemote": "Payer et rétrograder",
+         "btnPay": "Payer maintenant",
+         "title": "dans la playlist",
+         "titleDemote":"Rétrograder"
+      }
+   },
+
+   "popupLanguage": {
+      "title": "Changer la langue"
+   },
+
+   "login": {
+      "btn": "Se connecter à l'administration"
+   },
+
+   "searchComponent": {
+      "placeholder": "Rechercher un artiste, une musique ou un album"
+   },
+   
+   "trackItemComponent": {
+      "promoted": "PROMUS"
+   },
+
+   "alertComponent": {
+      "title": {
+         "createdSuccess": "Créé avec succès",
+         "updatedSuccess": "Mis à jour avec succès",
+         "deletedSuccess": "Supprimé avec succès"
+      }
+
+   },
+
+   "forbidden": {
+      "btn": "Retourner à l'accueil"
+   },
+
+   "callback": {
+      "loadingText": "Connexion en cours...",
+      "errorText": "Vous n'avez pas de rôle assigné. Veuillez contacter votre administrateur.",
+      "btn": "Retourn à la page d'acceuil"
+   }
+}

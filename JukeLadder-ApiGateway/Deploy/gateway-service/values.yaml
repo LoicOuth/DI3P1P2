@@ -1,0 +1,34 @@
+replicaCount: 1
+
+image:
+  repository: louthier/gateway-service
+  pullPolicy: Always
+  tag: "latest"
+
+env:
+  "DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE": ""
+  "ASPNETCORE_ENVIRONMENT": ""
+  
+imagePullSecrets:
+  - name: regcred
+  
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  classname: nginx
+  enabled: true
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: "/"
+  hosts:
+    - host: ~
+      paths: 
+      - path: "/"
+        pathType: Prefix
+
+autoscaling:
+  enabled: false
+
+serviceAccount:
+  create: false

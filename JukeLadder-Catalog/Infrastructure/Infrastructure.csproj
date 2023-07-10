@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="12.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+		<PackageReference Include="SolrNet" Version="1.1.1" />
+		<PackageReference Include="SolrNet.Core" Version="1.1.1" />
+		<PackageReference Include="SolrNet.Microsoft.DependencyInjection" Version="1.1.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Application\Application.csproj" />
+		<ProjectReference Include="..\Domain\Domain.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Persistance\Configurations\" />
+	</ItemGroup>
+
+</Project>

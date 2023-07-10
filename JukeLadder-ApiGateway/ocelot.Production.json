@@ -1,0 +1,272 @@
+{
+  "Routes": [
+    //Path BILLING
+    {
+      "DownstreamPathTemplate": "/api/v1/FeeManagement",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-billing-prod-billing-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/billing/fee",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Franchise",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-billing-prod-billing-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/billing/franchise",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Franchise/{franchiseId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-billing-prod-billing-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/billing/franchise/{franchiseId}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Franchise/email",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-billing-prod-billing-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/billing/franchise/email",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Franchise/count",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-billing-prod-billing-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/billing/franchise/count",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/PaymentIntend",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-billing-prod-billing-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/billing/payementIntend",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Product/{productId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-billing-prod-billing-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/billing/product/{productId}",
+      "UpstreamHttpMethod": [ "PUT", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Webhook",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-billing-prod-billing-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/billing/webhook",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/user",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-billing-prod-billing-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/billing/user",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/BillingState/{franchiseId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-billing-prod-billing-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/billing/billingState/{franchiseId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/BillingState",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-billing-prod-billing-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/billing/billingState",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    //Path PLAYLIST
+    {
+      "DownstreamPathTemplate": "/api/v1/Track",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-playlist-prod-playlist-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/playlist/track",
+      "UpstreamHttpMethod": [ "POST", "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Track/{franchiseId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-playlist-prod-playlist-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/playlist/track/{franchiseId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Track/{TrackId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-playlist-prod-playlist-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/playlist/track/{TrackId}",
+      "UpstreamHttpMethod": [ "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Track/{TrackId}/end",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-playlist-prod-playlist-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/playlist/track/{TrackId}/end",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/PlaylistState",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-playlist-prod-playlist-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/playlist/playlistState",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/PlaylistState/{franchiseId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-playlist-prod-playlist-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/playlist/playlistState/{franchiseId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/track/{trackId}/position",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-playlist-prod-playlist-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/playlist/track/{trackId}/position",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    //PATH Catalog
+    {
+      "DownstreamPathTemplate": "/api/v1/Deezer/search/playlist",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-catalog-prod-catalog-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/catalog/deezer/search/playlist",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Deezer/genres",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-catalog-prod-catalog-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/catalog/deezer/genres",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Track",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-catalog-prod-catalog-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/track",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Track/suggestions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "group-2-catalog-prod-catalog-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/track/suggestions",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ]
+
+}

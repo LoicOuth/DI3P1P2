@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: playlist
+  name: playlist
+spec:
+  selector:
+    matchLabels:
+      app: playlist
+  template:
+    metadata:
+      labels:
+        app: playlist
+    spec:
+      containers:
+        - image: playlist:dev
+          name: playlist
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: playlist
+  labels:
+    app: playlist
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: playlist

@@ -1,0 +1,20 @@
+{
+  "Routes": [
+    //Catalog API
+    {
+      "DownstreamPathTemplate": "/api/v1/Catalog",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Catalog",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    }
+
+  ]
+
+}

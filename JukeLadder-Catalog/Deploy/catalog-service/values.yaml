@@ -1,0 +1,35 @@
+replicaCount: 1
+
+image:
+  repository: louthier/catalog-service
+  pullPolicy: Always
+  tag: "latest"
+
+env:
+  "ASPNETCORE_ENVIRONMENT": Production""
+  "DB_CONNECTION_STRING": ""
+  "KEYCLOAK_ISSUER": ""
+  "KEYCLOAK_RSA_PUBLIC_KEY": ""
+  "RABBITMQ_HOST": ""
+  "RABBITMQ_VIRTUAL_HOST": ""
+  "RABBITMQ_PASSWORD": ""
+  "RABBITMQ_USERNAME": ""
+  "DEEZER_URL": ""
+  "SOLR_URL": ""
+  "SOLR_USERNAME": ""
+  "SOLR_PASSWORD": ""
+  "OPEN_TELEMETRY_COLLECTOR_URL": ""
+  "DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE": ""
+
+imagePullSecrets:
+  - name: regcred
+  
+service:
+  type: ClusterIP
+  port: 80
+
+autoscaling:
+  enabled: false
+
+serviceAccount:
+  create: false

@@ -1,0 +1,178 @@
+{
+   "administrator" : {
+      "sidebar": {
+         "dashboard": "Dashboard",
+         "franchisees": "Franchisees",
+         "payment": "Payment"
+      },
+
+      "dashboard": {
+         "widgetFranchise": "Franchisees"
+      },
+
+      "franchise": {
+         "createFranchise": "Create franchise",
+         "updateFranchise": "Update franchise",
+
+         "addPopup": {
+            "nameInput": "Enter name",
+            "chooseInput": "Choose user",
+
+            "alert": {
+               "createdSuccess": "Franchise created !",
+               "createdError": "Error during creating franchise !",
+               "updatedSuccess": "Updated successfully",
+               "updatedError": "Error during deleting franchise !",
+               "deleteSuccess": "Franchise deleted !",
+               "deletedError": "Error during deleting franchise !"
+
+            }
+         },
+         
+         "table": {
+            "name": "Name",
+            "barManager": "Bar manager",
+            "action": "Action"
+         },
+         "popupDelete": {
+            "body": "Do you really want to remove the franchise with the name : ",
+            "btn": "Confirm"
+         }
+      },
+
+      "payment": {
+         "btn": "Valid",
+         "min": "Minimum fee",
+         "max": "Maximum fee",
+         "from": "from",
+         "to": "to",
+
+         "alert": {
+            "updatedSuccess": "Fee bounds set successfully !",
+            "updatedError": "Error during setting fee bounds !"
+         }
+      }
+   },
+
+   "manager": {
+      "load": {
+         "loadingText": "Getting informations...",
+         "btnText": "Return in home page",
+         "errorText": "You do not have an assigned Bar, please contact the administrator."
+      },
+
+      "sidebar": {
+         "dashboard": "Dashboard",
+         "payment": "Payment",
+         "catalog": "Catalog",
+         "playlist": "Current playlist"
+
+      },
+      "dashboard": {
+         "serviceStatus": "Playlist status",
+         "payFeature": "Pay feature service",
+
+         "alert": {
+            "billingState" : "Error during updated promote feature state !",
+            "playlistState" : "Error during updated state of the playlist !"
+         }
+      },
+      "payment": {
+         "promoteTitle": "Set promote price",
+         "demoteTitle": "Set demote price",
+         "price": "Price",
+         "btn": "Valid",
+
+         "alert": {
+            "updatedSuccess": "Fee updated successfully to ",
+            "updatedError": "Error during updated fee !"
+         }
+      },
+
+      "catalog": {
+         "search": "Search playlist",
+         "placeholder": "Search a deezer playlist",
+         "btnAdd": "Add",
+
+         "alert": {
+            "addedSuccess": "Tracks added successfully to your catalog !",
+            "addedError": "Error during added tracks to catalog !"
+         }
+      },
+
+      "playlist": {
+         "btnAdd": "Add song",
+         "theme": "Playlist theme",
+
+         "manage": {
+            "titleAdd": "Add music to the current playlist",
+            "title": "Delete song",
+            "body": " Do you really want to remove the track from playlist : ",
+            "btn": "Confirm",
+            "btnAdd": "Add"
+         },
+
+         "alert" : {
+            "trackSuccess": "The track has been successfully added to the playlist !",
+            "trackError": "An error occurred while adding track to the playlist",
+            "positionSuccess": "The position of the track has been successfully updated !",
+            "positionError": "Error when updating the position",
+            "trackDeleted": "Track has been successfully removed from the playlist !"
+         }
+      }
+   },
+
+   "playlist": {
+      "loadingText": "Loading playlist",
+      "desactivated": "the playlist is deactivated",
+      "theme": "Resctricted theme",
+      "payFee": {
+         "part1": "Your music will be added to the bar playlist.",
+         "part2": "It will be played in about",
+         "part3": "You can pay to play it imediately.",
+         "part4": "You can pay to demote your music imediately.",
+         "btnAdd":"Add",
+         "btnPay&Add": "Pay & add",
+         "btnDemote": "Pay & demote",
+         "btnPay": "Pay Now",
+         "title": "in the playlist",
+         "titleDemote":"Demote"
+      }
+   },
+
+   "popupLanguage": {
+      "title": "Change language"
+   },
+
+   "login": {
+      "btn": "Login to administration"
+   },
+
+   "searchComponent": {
+      "placeholder": "Search an artist, an album or a music"
+   },
+
+   "trackItemComponent": {
+      "promoted": "PROMOTED"
+   },
+
+   "alertComponent": {
+      "title": {
+         "createdSuccess": "Created successfully",
+         "updatedSuccess": "Updated successfully",
+         "deletedSuccess": "Deleted successfully",
+         "addedSuccess": "Added successfully"
+      }
+
+   },
+
+   "forbidden": {
+      "btn": "Return to home"
+   },
+
+   "callback": {
+      "loadingText": "Connection in progress",
+      "errorText": "You do not have an assigned role, please contact the administrator.",
+      "btn": "Return in home page"
+   }
+}

@@ -1,0 +1,90 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "catalog-service.fullname" . }}
+  labels:
+    {{- include "catalog-service.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "catalog-service.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "catalog-service.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "catalog-service.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: {{ .Values.env.ASPNETCORE_ENVIRONMENT }}
+            - name: DB_CONNECTION_STRING
+              value: {{ .Values.env.DB_CONNECTION_STRING }}
+            - name: KEYCLOAK_ISSUER
+              value: {{ .Values.env.KEYCLOAK_ISSUER }}
+            - name: KEYCLOAK_RSA_PUBLIC_KEY
+              value: {{ .Values.env.KEYCLOAK_RSA_PUBLIC_KEY }}
+            - name: RABBITMQ_HOST
+              value: {{ .Values.env.RABBITMQ_HOST }}
+            - name: RABBITMQ_VIRTUAL_HOST
+              value: {{ .Values.env.RABBITMQ_VIRTUAL_HOST }}  
+            - name: RABBITMQ_PASSWORD
+              value: {{ .Values.env.RABBITMQ_PASSWORD }}
+            - name: RABBITMQ_USERNAME
+              value: {{ .Values.env.RABBITMQ_USERNAME }}
+            - name: DEEZER_URL
+              value: {{ .Values.env.DEEZER_URL }}
+            - name: SOLR_URL
+              value: {{ .Values.env.SOLR_URL }}
+            - name: SOLR_USERNAME
+              value: {{ .Values.env.SOLR_USERNAME }}
+            - name: SOLR_PASSWORD
+              value: {{ .Values.env.SOLR_PASSWORD }}
+            - name: OPEN_TELEMETRY_COLLECTOR_URL
+              value: {{ .Values.env.OPEN_TELEMETRY_COLLECTOR_URL }}
+            - name: DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE
+              value: {{ .Values.env.DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE | quote }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /Health
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /Health
+              port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

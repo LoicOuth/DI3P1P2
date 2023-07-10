@@ -1,0 +1,31 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/Health",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "g2catalogapp-catalog-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/Catalog/Health",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/v1/FeeManagement",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "g2billingapp-billing-service",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/billing/fee",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    }
+
+  ]
+
+}
